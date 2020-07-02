@@ -1,0 +1,30 @@
+﻿@model HW8.Models.Meet
+@{
+    ViewBag.Title = "Add Meet";
+}
+
+<div>
+    <h2>@ViewBag.Title</h2>
+    <br />
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <h4>MeetTitle</h4>
+            @Html.EditorFor(model => model.MeetLocation)
+            @Html.ValidationMessageFor(model => model.MeetLocation)
+        </div>
+
+        <div class="form-group">
+            <h4>MeetDate</h4>
+            @Html.TextBoxFor(model => model.MeetDate, new { type = "date" })
+            @Html.ValidationMessageFor(model => model.MeetDate)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Add" class="btn btn-default" />
+        </div>
+    }
+
+    <p>@ViewBag.Success</p>
+</div>

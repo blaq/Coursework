@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="hw2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Legit Sun Stats</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <h2>Enter day</h2>
+                        <input id="date" type="text" value="MM/DD/YYYY"><br><br>
+                    </div>
+                    <div class="col">
+                        <h2>Enter time</h2>
+                        <input id="time" type="text" value="HH:MM:SS">
+                        <input name="half" type="radio" value="0" checked>am
+                        <input name="half" type="radio" value="12">pm<br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button id="current" onclick="getCurrentDate()">Current Date + Time</button>
+                    </div>
+                    <div class="col">
+                        <button id="custom" onclick="getCustomDate()">Calculate Stats</button>
+                    </div>
+                </div>
+                <div class="row" id="errors">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row" id="resultsHeader">
+                </div>
+                <div class="row" id="resultsRow">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

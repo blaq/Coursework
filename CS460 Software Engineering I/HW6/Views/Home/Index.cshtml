@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HW6.Models.StockItem>
+
+@{
+    ViewBag.Title = "Search Stock Items";
+}
+
+<br />
+<div>
+    <form method="get">
+        @Html.TextBox("search", null, new { @placeholder = "search by stock item..." })
+        <input class="button" type="submit" value="Search" />
+    </form>
+</div>
+
+
+<br />
+<div>
+    <b>@ViewBag.Found</b>
+    <dl>
+        @foreach (var item in Model)
+        {
+            <dt>@Html.ActionLink(item.StockItemName.ToString(), "Details/" + item.StockItemID.ToString(), "StockItem", new object { }, new { @class = "dashboard" })</dt>
+        }
+    </dl>
+</div>

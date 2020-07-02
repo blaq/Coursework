@@ -1,0 +1,16 @@
+﻿@model IEnumerable<HW8.Models.Athlete>
+@{
+    ViewBag.Title = "All Athletes";
+}
+
+<div>
+    <h2>@ViewBag.Title</h2>
+    <br />
+
+    @foreach (var item in Model.OrderBy(g => g.AthleteName))
+    {
+
+        <p>@Html.ActionLink(item.AthleteName, "Athlete", new { id = item.Id })</p>
+
+    }
+</div>

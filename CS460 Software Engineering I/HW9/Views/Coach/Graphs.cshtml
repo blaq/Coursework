@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HW8.Models.PointsViewModel>
+@{
+    ViewBag.Title = "Graphs";
+}
+
+<script src="https://code.angularjs.org/1.4.12/angular.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<div ng-app="canvasjs" ng-controller="adminDashboardController">
+    <div id="chartContainer" style="height: 360px; width: 100%;"></div>
+</div>
+
+<script>
+    var myapp = angular.module("canvasjs", []);
+
+    myapp.controller("adminDashboardController", ["$scope", function ($scope) {
+        var dps = @Html.Raw(Json.Encode(Model));
+        var chartOptions = {
+            title: {
+                text: "Line Chart in AngularJS v1"
+            },
+            axisX:{      
+                valueFormatString: "DD-MM-YY" ,
+                labelAngle: -50
+            },
+            axisY :{
+		        includeZero:false
+	        },
+            data: [{
+                type: "line",
+                dataPoints: dps
+            }]
+        };
+        var chart = new CanvasJS.Chart("chartContainer", chartOptions);
+        chart.render();
+    }]);
+</script>
+
+<p>@Html.Raw(Json.Encode(Model));</p>

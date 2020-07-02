@@ -1,0 +1,118 @@
+﻿@model HW6.Models.ViewModels.StockItemDetailsViewModel
+
+@{
+    ViewBag.Title = "Stock Item Details";
+}
+
+<div id="stock-item">
+    <h2>StockItem</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>
+            @Html.DisplayFor(model => model.StockItemName)
+        </dd>
+
+        @if (!String.IsNullOrEmpty(Model.Size))
+        {
+            <dt>Size</dt>
+            <dd>
+                @Html.DisplayFor(model => model.Size)
+            </dd>
+        }
+
+        <dt>Recommended Retail Price</dt>
+        <dd>
+            $@Html.DisplayFor(model => model.RecommendedRetailPrice)
+        </dd>
+
+        <dt>Typical Weight Per Unit</dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypicalWeightPerUnit)
+        </dd>
+
+        <dt>Lead Time</dt>
+        <dd>
+            @Html.DisplayFor(model => model.LeadTimeDays) days
+        </dd>
+
+        <dt>Valid Since Date</dt>
+        <dd>
+            @{
+                var date = Model.ValidFrom.ToShortDateString();
+            }
+            @date
+        </dd>
+
+        <dt>Country of Origin</dt>
+        <dd>
+            @{
+                var cor = Model.CustomFields.Split(new[] { "CountryOfManufacture" }, StringSplitOptions.None)[1];
+                cor = cor.Split(new[] { ',' }, StringSplitOptions.None)[0];
+                cor = cor.Replace(": \"", string.Empty).Replace("\"", string.Empty).Replace("{", string.Empty).Replace("}", string.Empty);
+            }
+            @cor
+        </dd>
+
+        <dt>Tags</dt>
+        @{
+
+            var tags = Model.Tags.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var test2 = "";
+            foreach (var item in tags)
+            {
+                test2 += item;
+            }
+        }
+        @foreach (var i in tags)
+        {
+            string tag = i.Replace("\"", string.Empty).Replace("[", string.Empty).Replace("]", string.Empty);
+            <dd>
+                @tag
+            </dd>
+        }
+    </dl>
+</div>
+
+<div id="stock-item">
+    <h2>Supplier Profile</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Company</dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+        <dt>Phone</dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplierNumber)
+        </dd>
+        <dt>Fax</dt>
+        <dd>
+            @Html.DisplayFor(model => model.FaxNumber)
+        </dd>
+        <dt>Website</dt>
+        <dd>
+            @Html.DisplayFor(model => model.WebsiteURL)
+        </dd>
+        <dt>Contact</dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContact)
+        </dd>
+    </dl>
+</div>
+
+<div id="stock-item">
+    <h2>Sales History Summary</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Orders</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Orders)
+        </dd>
+        <dt>Orders</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Orders)
+        </dd>
+    </dl>
+</div>

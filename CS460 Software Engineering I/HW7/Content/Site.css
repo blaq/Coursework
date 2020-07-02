@@ -1,0 +1,77 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: dimgray;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#user {
+    background-color: cadetblue;
+    color: azure;
+    align-content: center;
+    border: solid dimgray;
+}
+
+#user-pic {
+    max-width: 20%;
+    width: 15%;
+    float: left;
+    margin: 5%
+}
+
+h2, p {
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+#thumbnail {
+    max-width: 100%;
+    width: 8%;
+}
+
+li {
+    background-color: cadetblue;
+    color: azure;
+    list-style: none;
+    display: inline-block;
+    border: solid dimgray;
+}
+
+a.stop:link,
+a.stop:visited,
+a.stop:hover,
+a.stop:active {
+    color: azure;
+}
+
+h2.title, 
+td, 
+th {
+    color: azure;
+    padding: 1em;
+}
+
+.commitsButton {
+    color: cadetblue;
+    background-color: azure;
+    float: right;
+}

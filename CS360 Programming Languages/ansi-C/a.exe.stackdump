@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=61152868
+eax=20041908 ebx=00010000 ecx=00004000 edx=00000000 esi=20041908 edi=FF930008
+ebp=0062CB88 esp=0062CB7C program=D:\Lab3\a.exe, pid 4748, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0062CB88  61152868 (FF930008, 20041908, 00010000, 61120C14)
+End of stack trace

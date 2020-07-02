@@ -1,0 +1,30 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class drinksPanel extends JPanel
+{
+	private JCheckBox checkBox[];
+
+	public drinksPanel()
+	{
+		final int drinkListSize = 4;// used to hold the dirnkType string array size; 
+
+		setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));// Using the Box layout top down 
+		setBackground(Color.cyan);
+	
+		Food drinks = new Food();// uses the Food class for radio buttons and checkBoxes 
+		JLabel logo = new JLabel();
+		add(logo = drinks.logoPrint());	
+	
+		checkBox = new JCheckBox[drinkListSize];
+		JLabel pickDrink = new JLabel("Pick your drinks (Coke only!)");
+		add(pickDrink); // Adds pickDrink to the panel
+		
+		String drinkTypes[] = {"Coke","Sprite", "Dr.Pepper"};
+		checkBox = drinks.setCheckBox(drinkTypes, drinkListSize); // creates an array of check Boxes
+		for (int i = 0; i < checkBox.length-1;i++)
+			add(checkBox[i]);// adds check boxes to the panel
+	
+	}
+}	

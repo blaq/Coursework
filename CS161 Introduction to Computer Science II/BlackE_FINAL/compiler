@@ -1,0 +1,17 @@
+public class compiler
+{
+  public static void main(String[] args)
+  {
+    try
+    {
+      PrintWriter writer = new PrintWriter("blabla2.bat", "UTF-8");
+      writer.println("@echo off");
+      writer.println("javac Project.java");
+      writer.println("java Project");
+      writer.println("pause");
+      writer.close();
+    }
+    catch (IOException e)
+    {
+       // do something
+    }

@@ -1,0 +1,25 @@
+Rick	James	8276	Carlos	Ave	Las Vegas	NV	87126	5553451567	23.95
+John	Gibson	9127	Oak	Dr	Corvallis	OR	97330	5552812313	156.78
+Ron	Wills	1155	Ivy	Pl	Atlantic	Ga	37339	5552123145	189.56
+Rita	Jones	1259	Chase	Ave	Las Vegas	NV	87126	5554445671	2145.60
+Jason	Knight	7154	Pine	Dr	Gresham 	OR	97380	5558124545	3157.44
+Clara	Swanson	1944	Main	Pl	Springfield	OR	97339	5552123144	212.99
+Robert	Peck	1866	First	Ave	Las Vegas	NV	87126	5553455425	250.00
+Dora	Garcia	2179	Fir	Dr	Corvallis	OR	97330	5552812919	350.00
+Peter	Keck	1465	Circle	Pl	Gold Beach	OR	97339	5552123256	2150.00
+Stuart	Smith	2387	Sweek	Ave	Las Vegas	NV	87126	5553455489	650.99
+Tyler	Wild	1313	Spooky	Ln	Corvallis	OR	97330	5552813213	587.45
+Laretta	Peters	2224	Chase	Pl	Monmouth	OR	97361	5552124465	123.45
+Kristi	Emry	3465	Cerrito	Ave	Las Vegas	NV	87126	5553455567	3212.65
+Kelli	Gard	1894	Elm	Dr	Corvallis	OR	97330	5552816678	51.00
+Jacob	Andrews	8159	Rose	Ct	Mill City	OR	97322	5552127879	64.00
+Ryan	Perkins	7546	Prince	Ave	Las Vegas	NV	87126	5553451989	13.00
+Joshua	Gilbert	9278	Monroe	Dr	Corvallis	OR	97330	5552832656	95.00
+Miles	Crain	4578	Chester	Dr	Corvallis	OR	97331	5552345678	1544.00
+Butch	Cassidy	5498	Sutton	Pl	Gresham 	OR	97380	5416565797	1798.56
+Perry	Winkle	8185	Shaver	Ave	Las Vegas	NV	87126	5553812346	195.66
+Loni	Day	4598	Holmen	Dr	Corvallis	OR	97330	5555289741	1878.50
+Nikita	Benson	1787	Grant	Pl	Portland	OR	97321	5553569898	1500.00
+Rusty	Krouger	8829	Simeon	Ave	Las Vegas	NV	87126	5555677847	2100.00
+Wally 	Wallace	2898	Wilson	Blvd	Jackson Center	OH	23466	5552222222	2222.22
+Joe 	Jones	1212	Water	St	Millersburg	OR	97366	5555555555	55.55

@@ -1,0 +1,67 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class foodPanel2 extends JPanel implements lab5
+{
+	private static JRadioButton pizzaType[];
+	private static JCheckBox displayToppings[];
+	private static ButtonGroup group;
+	private static JButton clear;
+
+	public foodPanel2()
+	{
+		final int styleSize = 4; // Used to hold the size of typeOfPizza
+		final int toppingSize = 4;// used to hold the size of toppings 
+		
+		System.out.println(MyInterface.test);
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		setBackground(Color.cyan);// sets the background to the color cyan 
+		
+		group = new ButtonGroup();// used to group the radio buttons together		
+		Food food = new Food();// uses some useful methods from the Food class
+		JLabel logo = new JLabel();// used to hold the company logo 
+		clear = new JButton("Clear");	
+	
+		logo = food.logoPrint();
+		add(logo);// adds the logo to the panel here 
+		String typeOfPizza[] = {"Hand Tossed - 5$", "Deep Dsih - 8$", "Flat Bread - 5$"};
+		pizzaType = food.setPizzaStyle(typeOfPizza, styleSize);
+	
+		for (int i = 0; i < styleSize-1; i++)//fills the radio buttons 
+		{	
+			add(pizzaType[i]);
+			group.add(pizzaType[i]);
+		}
+		
+		add(Box.createRigidArea(new Dimension(0, 10)));
+		String toppings[] = {"Pepperoni - .30$","Spinach - .30$","Anchovies - 30$"};
+		displayToppings = food.setCheckBox(toppings, toppingSize);
+		for (int i = 0; i < toppingSize-1; i++)
+			add(displayToppings[i]);
+		 
+		add(Box.createRigidArea(new Dimension(0, 10)));
+		Clear listener = new Clear();
+		clear.addActionListener(listener);
+		
+		add(Box.createRigidArea(new Dimension(0, 10)));
+		add(clear);// adds the clear button to the panel 
+	}// foodPanel2 end
+private class Clear implements ActionListener // This class is used for the clear button
+	{
+		public void actionPerformed(ActionEvent event)//clears all user input
+		{
+			Object source = event.getSource();
+			
+			if (source == clear)
+			{
+				for (int i = 0; i < displayToppings.length-1;i++)
+					displayToppings[i].setSelected(false);
+				
+				group.clearSelection();
+			}
+		}
+	}//class clear end
+
+ 
+}//class end

@@ -1,0 +1,7 @@
+from app.forms import RegistrationForm
+
+username = <input id="username" name="username" required type="text" value="hello">
+
+def test_validate_username():
+	assert (RegistrationForm.validate_username("",username)) == "Please use a different username."
+	

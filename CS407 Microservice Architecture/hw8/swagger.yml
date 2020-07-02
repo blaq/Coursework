@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  description: swagger file for posts api
+  version: "1.0.0"
+  title: Wolfit Posts API
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /posts/:
+    get:
+      operationId: "posts.read"
+      tags:
+        - "Posts"
+      summary: "Data Structure of Posts"
+      description: "Recorded Posts"
+      responses:
+        200:
+          description: "Successful post read"
+          schema:
+            type: "array"
+            items:
+              properties:
+                id:
+                  type: "integer"
+                title:
+                  type: "string"
+                link:
+                  type: "boolean"
+                url:
+                  type: "string"
+                timestamp:
+                  type: "string"
+                user_id:
+                  type: "integer"
+                category_id:
+                  type: "integer"
+                vote_count:
+                  type: "integer"

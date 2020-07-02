@@ -1,0 +1,7 @@
+FLASK_APP = activity_logger.py
+FLASK_ENV = 'development'
+DB_HOST = 'ds217864.mlab.com:17864'
+DB = 'activity-logger-dev'
+DB_USER = 'user_1'
+DB_PASSWORD = 'p4ssw0rd'
+SLEEP_TIME = '1'

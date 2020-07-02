@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+celery = {file = "https://github.com/celery/celery/tarball/master"}
+redis = "==2.10.6"
+5668f3e = {file = "https://github.com/celery/celery/tarball/master"}
+
+[requires]
+python_version = "3.7"
